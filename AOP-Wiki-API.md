@@ -32,27 +32,27 @@ These exercises can also be done through coding environments such as R or Python
 ### Testing Functions
 Go to the request called `get-all-mies` and run it.
 
-Question: What is the ID for the MIE "Activation, LXR"?
+Question 1.1: What is the ID for the MIE "Activation, LXR"?
 
-<button onclick="toggleAnswer('q1')">Answer</button><span id="q1" style="visibility: hidden">167</span>
+<button onclick="toggleAnswer('q1.1')">Answer</button><span id="q1.1" style="visibility: hidden">167</span>
 
 Go to the request called `get-ao-for-mie` and run it with the ID that you found in the previous exercise.
 
-Question: Which AO is linked to this MIE?
+Question 1.2: Which AO is linked to this MIE?
 
-<button onclick="toggleAnswer('q2')">Answer</button><span id="q2" style="visibility: hidden">Liver steatosis, with KE IDs 345 and 459.</span>
+<button onclick="toggleAnswer('q1.2')">Answer</button><span id="q1.2" style="visibility: hidden">Liver steatosis, with KE IDs 345 and 459.</span>
 
 Go to the `get-mie-for-ao` call.
 
-Question: How many unique MIEs lead to the AOs found in the previous exercise?
+Question 1.3: How many unique MIEs lead to the AOs found in the previous exercise?
 
-<button onclick="toggleAnswer('q3')">Answer</button><span id="q3" style="visibility: hidden">16</span>
+<button onclick="toggleAnswer('q1.3')">Answer</button><span id="q1.3" style="visibility: hidden">16</span>
 
 ### Using CURL
 
-Question: What needs to change in the CURL command to save the file as "aops.csv"?
+Question 2: What needs to change in the CURL command to save the file as "aops.csv"?
 
-<button onclick="toggleAnswer('q4')">Answer</button><span id="q4" style="visibility: hidden">You need to add the `-o aops.csv` option at the end of the CURL command:
+<button onclick="toggleAnswer('q2')">Answer</button><span id="q2" style="visibility: hidden">You need to add the `-o aops.csv` option at the end of the CURL command:
 curl -X GET "https://aopwiki-api.cloud.vhp4safety.nl/api-git/marvinm2/AOPWikiQueries/get-all-chemicals" -H "accept: text/csv" -o aops.csv
 </span>
 
