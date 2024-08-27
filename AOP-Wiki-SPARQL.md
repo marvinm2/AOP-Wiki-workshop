@@ -21,7 +21,7 @@ Welcome to the AOP-Wiki SPARQL endpoint workshop. The exercises are meant as a s
 The AOP-Wiki serves as the primary repository of qualitative information for AOPs and is a central component in the AOP development effort coordinated by the Organisation for Economic Co-operation and Development (OECD). These AOPs describe mechanistic information about toxicodynamic processes and can be used to develop effective risk assessment strategies. An AOP is initiated by a stressor (e.g. a chemical) that causes a Molecular Initiating Event, which is followed by Key Eevents (measurable, essential steps) along a pathway towards an Adverse Outcome for an organism or population. KEs are connected through Key Event Relationships (KERs), which capture the evidence supporting the AOP in a structured way. 
 
 ### AOP-Wiki SPARQL endpoint
-The AOP-Wiki SPARQL endpoint is loaded with RDF of the Adverse Outcome Pathway (AOP)-Wiki database [aopwiki.org](https://aopwiki.org/). It is used by both the SNORQL UI and REST API to explore the data. The AOP-Wiki SPARQL endpoint is accessible on [aopwiki.rdf.bigcat-bioinformatics.org/sparql/](https://aopwiki.rdf.bigcat-bioinformatics.org/sparql/). This is also the SPARQL endpoint URL that should be used if working from coding environments.
+The AOP-Wiki SPARQL endpoint is loaded with RDF of the Adverse Outcome Pathway (AOP)-Wiki database [aopwiki.org](https://aopwiki.org/). It is used by both the SNORQL UI and REST API to explore the data. The AOP-Wiki SPARQL endpoint is accessible on [aopwiki.cloud.vhp4safety.nl/sparql/](https://aopwiki.cloud.vhp4safety.nl/sparql/). This is also the SPARQL endpoint URL that should be used if working from coding environments, and these exercises could also be done through R or Python, for example.
 
 ## Figure of RDF schema
 !["AOP-Wiki RDF simple"](AOP-Wiki_RDF_simple.png)
@@ -128,7 +128,19 @@ The SPARQL query will require the use of the mapped chemical IDs in AOP-Wiki usi
 
 Question 4.1: What are the titles of the two human pathways in WikiPathways that have the chemical described in the stressor of Adverse Outcome Pathway with ID 274 in AOP-Wiki?
 
-<button onclick="toggleAnswer('q4.1')">Answer</button><span id="q4.1" style="visibility: hidden">For Valproic acid: Valproic acid pathway (WP3871) and for Butyrate: Butyrate-induced histone acetylation (WP2366) and SCFA and skeletal muscle substrate metabolism (WP4030) Link to SPARQL query: [https://bit.ly/3Z33ve5](https://bit.ly/3Z33ve5) and the shortened version: [https://bit.ly/3Z8RXWG](https://bit.ly/3Z8RXWG)</span>
+<button onclick="toggleAnswer('q4.1')">Answer</button><span id="q4.1" style="visibility: hidden">For Valproic acid: Valproic acid pathway (WP3871) and for Butyrate: Butyrate-induced histone acetylation (WP2366) and SCFA and skeletal muscle substrate metabolism (WP4030). This can be done with SPARQL query:
+PREFIX wp: <http://vocabularies.wikipathways.org/wp#>
+SELECT  ?ChemicalName ?ChEBI ?PathwayTitle ?PathwayID
+WHERE{
+   ?chemical a cheminf:000000 ; dc:title ?ChemicalName ; dcterms:isPartOf ?Stressor ; skos:exactMatch ?mappedid .
+   ?Stressor dcterms:isPartOf ?AOP .
+   ?AOP a aopo:AdverseOutcomePathway ; dc:identifier aop:274.
+   ?mappedid a cheminf:000407 ; cheminf:000407 ?ChEBI.
+   SERVICE <http://sparql.wikipathways.org/sparql>{ 
+     ?metabolite wp:bdbChEBI ?mappedid ; dcterms:isPartOf ?Pathway.
+     ?Pathway a wp:Pathway ; dcterms:identifier ?PathwayID ; dc:title ?PathwayTitle ; wp:organismName "Homo sapiens" .}}
+ORDER BY DESC (?ChemicalName)
+</span>
 
 ## Conclusion
 This workshop provided a comprehensive introduction to querying the AOP-Wiki database using SPARQL. Through a series of progressively challenging exercises, participants learned how to construct and adapt SPARQL queries to retrieve various types of data from the AOP-Wiki RDF. The exercises covered fundamental concepts such as listing subjects, counting entities, and exploring relationships between different types of data, culminating in the use of federated SPARQL queries to link data across multiple databases.

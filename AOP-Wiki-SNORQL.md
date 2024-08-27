@@ -21,7 +21,7 @@ Welcome to the AOP-Wiki SNORQL User Interface workshop. The exercises are meant 
 The AOP-Wiki serves as the primary repository of qualitative information for AOPs and is a central component in the AOP development effort coordinated by the Organisation for Economic Co-operation and Development (OECD). These AOPs describe mechanistic information about toxicodynamic processes and can be used to develop effective risk assessment strategies. An AOP is initiated by a stressor (e.g. a chemical) that causes a Molecular Initiating Event, which is followed by Key Eevents (measurable, essential steps) along a pathway towards an Adverse Outcome for an organism or population. KEs are connected through Key Event Relationships (KERs), which capture the evidence supporting the AOP in a structured way. 
 
 ### AOP-Wiki SNORQL User Interface (UI)
-The AOP-Wiki SNORQL UI is loaded with RDF of the Adverse Outcome Pathway (AOP)-Wiki database [aopwiki.org](https://aopwiki.org/). It is used by both the SNORQL UI and REST API to explore the data. The AOP-Wiki SPARQL endpoint is accessible on [aopwiki.rdf.bigcat-bioinformatics.org](https://aopwiki.rdf.bigcat-bioinformatics.org). 
+The AOP-Wiki SNORQL UI is loaded with RDF of the Adverse Outcome Pathway (AOP)-Wiki database [aopwiki.org](https://aopwiki.org/). The AOP-Wiki SNORQL UI is accessible on [aopwiki.cloud.vhp4safety.nl](https://aopwiki.cloud.vhp4safety.nl/). 
 
 ## Exercises
 To start with exploring the functionalities of the SNORQL UI, please replace the default query panel with `https://github.com/marvinm2/AOPWikiSNORQL-demo` within the **SPARQL Examples** panel for the duration of this workshop. Then, click the yellow refresh button next to the input box. This will show a new, more concise query panel. 
@@ -99,6 +99,7 @@ In this exercise, you will explore the `OPTIONAL`, `FILTER`, and `ORDER BY` func
 Question 4.1: How many results are shown if you make the optional section obligatory?
 
 <button onclick="toggleAnswer('q4.1')">Answer</button><span id="q4.1" style="visibility: hidden">11</span>
+
 Next, change the filter to search for AOs with "cancer" in their title. This should yield 32 results.
 
 Question 4.2: What does the "i" in the filter do?
