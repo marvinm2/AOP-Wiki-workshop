@@ -27,7 +27,7 @@ The AOP-Wiki SPARQL endpoint is loaded with RDF of the Adverse Outcome Pathway (
 
 ## Figure of RDF schema
 :::{figure-md} markdown-fig
-<img src="AOP-Wiki_RDF_simple.png" alt="AOP-Wiki RDF simple" class="bg-primary mb-1" width="200px">
+<img src="pics/AOP-Wiki_RDF_simple.png" alt="AOP-Wiki RDF simple" class="bg-primary mb-1" width="200px">
 This is a simplified version of the AOP-Wiki RDF schema. Major subjects are represented in green, and their properties are highlighted in grey. The predicates are indicated on the arrows. For the complete schema description, see [https://doi.org/10.1089/aivt.2021.0010](https://doi.org/10.1089/aivt.2021.0010).
 :::
 
