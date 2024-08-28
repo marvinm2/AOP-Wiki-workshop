@@ -23,7 +23,7 @@ Welcome to the AOP-Wiki SPARQL endpoint workshop. The exercises are meant as a s
 The AOP-Wiki serves as the primary repository of qualitative information for AOPs and is a central component in the AOP development effort coordinated by the Organisation for Economic Co-operation and Development (OECD). These AOPs describe mechanistic information about toxicodynamic processes and can be used to develop effective risk assessment strategies. An AOP is initiated by a stressor (e.g. a chemical) that causes a Molecular Initiating Event, which is followed by Key Eevents (measurable, essential steps) along a pathway towards an Adverse Outcome for an organism or population. KEs are connected through Key Event Relationships (KERs), which capture the evidence supporting the AOP in a structured way. 
 
 ### AOP-Wiki SPARQL endpoint
-The AOP-Wiki SPARQL endpoint is loaded with RDF of the Adverse Outcome Pathway (AOP)-Wiki database [aopwiki.org](https://aopwiki.org/). It is used by both the SNORQL UI and REST API to explore the data. The AOP-Wiki SPARQL endpoint is accessible on [aopwiki.cloud.vhp4safety.nl/sparql/](https://aopwiki.cloud.vhp4safety.nl/sparql/). This is also the SPARQL endpoint URL that should be used when working from coding environments, these exercises could also be done through R or Python, for example.
+The AOP-Wiki SPARQL endpoint, which is deployed in the VHP4Safety platform, is loaded with RDF of the Adverse Outcome Pathway (AOP)-Wiki database [aopwiki.org](https://aopwiki.org/). It is used by both the SNORQL UI and REST API to explore the data. The AOP-Wiki SPARQL endpoint is accessible on [aopwiki.cloud.vhp4safety.nl/sparql/](https://aopwiki.cloud.vhp4safety.nl/sparql/). This is also the SPARQL endpoint URL that should be used when working from coding environments, these exercises could also be done through R or Python, for example.
 
 ## Figure of RDF schema
 ![](pics/AOP-Wiki_RDF_simple.png)
@@ -82,11 +82,11 @@ When copying this SPARQL query and executing it, you will find that the AOP-Wiki
 
 Question 2.1: How many Adverse Outcome Pathways are present in the AOP-Wiki RDF? 
 
-<button onclick="toggleAnswer('q2.1')">Answer</button><span id="q2.1" style="visibility: hidden">333</span>
+<button onclick="toggleAnswer('q2.1')">Answer</button><span id="q2.1" style="visibility: hidden">487</span>
 
 Question 2.2: How many chemicals are present in the AOP-Wiki RDF? 
 
-<button onclick="toggleAnswer('q2.2')">Answer</button><span id="q2.2" style="visibility: hidden">329</span>
+<button onclick="toggleAnswer('q2.2')">Answer</button><span id="q2.2" style="visibility: hidden">391</span>
 
 Slightly more complex, we count subjects that have a particular property defined.
 
@@ -94,14 +94,14 @@ Question 2.3: How many Key Events have a description?
 
 <button onclick="toggleAnswer('hint2.3')">Hint</button><span id="hint2.3" style="visibility: hidden">Define subject as type "Key Event" and also retrieve its description. This is a forced request (not optional) so the returned table will only contain Key Events with a description</span> 
 
-<button onclick="toggleAnswer('q2.3')">Answer</button><span id="q2.3" style="visibility: hidden">389 Key Events exist that have a description.</span>
+<button onclick="toggleAnswer('q2.3')">Answer</button><span id="q2.3" style="visibility: hidden">532 Key Events exist that have a description.</span>
 
 ### Exercise 3 - More detailed exploration
 With this exercise, the RDF will be explored a little more extensively. By combining statements in the RDF query, we can link multiple subjects and filter for content that we want to get back from the service. 
 
 Question 3.1: What are the name and CAS ID of the chemical that is related to stressor with ID 50?
 
-<button onclick="toggleAnswer('hint3.1')">Hint</button><span id="hint3.1" style="visibility: hidden">Define subject as type "Chemical" as in Q2.2, retrieve the title with the `dc:title` property as the example before Q1.3, and request the CAS ID with `cheminf:0000446`. Add a third statement with the link between a stressor ([prefix of stressor]:[ID]) and chemical as described in the figure. </span>
+<button onclick="toggleAnswer('hint3.1')">Hint</button><span id="hint3.1" style="visibility: hidden">Define subject as type "Chemical" as in Q2.2, retrieve the title with the `dc:title` property as the example before Q1.3, and request the CAS ID with `cheminf:000446`. Add a third statement with the link between a stressor ([prefix of stressor]:[ID]) and chemical as described in the figure. </span>
 
 <button onclick="toggleAnswer('q3.1')">Answer</button><span id="q3.1" style="visibility: hidden">Rotenone, with CAS 83-79-4</span>
 
@@ -111,7 +111,7 @@ Question 3.2: What is the title of the Adverse Outcome Pathway that is activated
 
 Question 3.3: What are the identifiers and titles of the Molecular Initiating Events that leads to the Adverse Outcome with ID 344 (Liver fibrosis)?
 
-<button onclick="toggleAnswer('q3.3')">Answer</button><span id="q3.3" style="visibility: hidden">244 (Alkylation, Protein), 1539 (Endocytotic lysosomal uptake) and 1740 (ACE2 inhibition)</span>
+<button onclick="toggleAnswer('q3.3')">Answer</button><span id="q3.3" style="visibility: hidden">244 (Alkylation, Protein), 1539 (Endocytotic lysosomal uptake), 1740 (ACE2 inhibition), and 18 (Activation, AhR)</span>
 
 ### Exercise 4 - Federated SPARQL query
 This final exercise adds an extra level of difficulty by linking the AOP-Wiki RDF with another database through SPARQL (this is called a Federated SPARQL query), and is not expected to be answered within the workshop time constraints unless very familiar with SPARQL. In this exercise we will explore the connection between AOP-Wiki and WikiPathways. The SPARQL query will need to contain a `SERVICE` function and the final query will have the following structure:
@@ -130,7 +130,7 @@ The SPARQL query will require the use of the mapped chemical IDs in AOP-Wiki usi
 
 Question 4.1: What are the titles of the two human pathways in WikiPathways that have the chemical described in the stressor of Adverse Outcome Pathway with ID 274 in AOP-Wiki?
 
-<button onclick="toggleAnswer('q4.1')">Answer</button><span id="q4.1" style="visibility: hidden">For Valproic acid: Valproic acid pathway (WP3871) and for Butyrate: Butyrate-induced histone acetylation (WP2366) and SCFA and skeletal muscle substrate metabolism (WP4030). This can be done with SPARQL query:
+<button onclick="toggleAnswer('q4.1')">Answer</button><span id="q4.1" style="visibility: hidden">For Valproic acid: Valproic acid pathway (WP3871) and for Butyrate: Butyrate-induced histone acetylation (WP2366), SCFA and skeletal muscle substrate metabolism (WP4030), Tryptophan metabolism (WP465), and Effect of intestinal microbiome on anticoagulant response of vitamin K antagonists (WP5273). This can be done with SPARQL query:
 PREFIX wp: <http://vocabularies.wikipathways.org/wp#>
 SELECT  ?ChemicalName ?ChEBI ?PathwayTitle ?PathwayID
 WHERE{
