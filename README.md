@@ -1,4 +1,4 @@
-<img src="pics/VHPlogo.png" alt="VHP4Safety" class="bg-primary mb-1" width="200px" align="right" padding="20px">
+<img src="pics/VHPlogo.png" alt="VHP4Safety" class="bg-primary mb-1" width="300px" align="right">
 
 # AOP-Wiki-workshop
 Go to [https://marvinm2.github.io/AOP-Wiki-workshop](https://marvinm2.github.io/AOP-Wiki-workshop).
