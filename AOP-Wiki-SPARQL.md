@@ -1,3 +1,5 @@
+<img src="pics/VHPlogo.png" alt="VHP4Safety" class="bg-primary mb-1" width="300px" align="right">
+
 # Querying the AOP-Wiki using SPARQL
 
 [Back to overview](README.md)
@@ -21,11 +23,11 @@ Welcome to the AOP-Wiki SPARQL endpoint workshop. The exercises are meant as a s
 The AOP-Wiki serves as the primary repository of qualitative information for AOPs and is a central component in the AOP development effort coordinated by the Organisation for Economic Co-operation and Development (OECD). These AOPs describe mechanistic information about toxicodynamic processes and can be used to develop effective risk assessment strategies. An AOP is initiated by a stressor (e.g. a chemical) that causes a Molecular Initiating Event, which is followed by Key Eevents (measurable, essential steps) along a pathway towards an Adverse Outcome for an organism or population. KEs are connected through Key Event Relationships (KERs), which capture the evidence supporting the AOP in a structured way. 
 
 ### AOP-Wiki SPARQL endpoint
-The AOP-Wiki SPARQL endpoint, which is deployed in the VHP4Safety platform, is loaded with RDF of the Adverse Outcome Pathway (AOP)-Wiki database [aopwiki.org](https://aopwiki.org/). It is used by both the SNORQL UI and REST API to explore the data. The AOP-Wiki SPARQL endpoint is accessible on [aopwiki.cloud.vhp4safety.nl/sparql/](https://aopwiki.cloud.vhp4safety.nl/sparql/). This is also the SPARQL endpoint URL that should be used if working from coding environments, and these exercises could also be done through R or Python, for example.
+The AOP-Wiki SPARQL endpoint, which is deployed in the VHP4Safety platform, is loaded with RDF of the Adverse Outcome Pathway (AOP)-Wiki database [aopwiki.org](https://aopwiki.org/). It is used by both the SNORQL UI and REST API to explore the data. The AOP-Wiki SPARQL endpoint is accessible on [aopwiki.cloud.vhp4safety.nl/sparql/](https://aopwiki.cloud.vhp4safety.nl/sparql/). This is also the SPARQL endpoint URL that should be used when working from coding environments, these exercises could also be done through R or Python, for example.
 
 ## Figure of RDF schema
-!["AOP-Wiki RDF simple"](AOP-Wiki_RDF_simple.png)
-This is a simplified version of the AOP-Wiki RDF schema. Major subjects are represented in green, and their properties are highlighted in grey. The predicates are indicated on the arrows. For the complete schema description, see https://doi.org/10.1089/aivt.2021.0010.
+![](pics/AOP-Wiki_RDF_simple.png)
+*This is a simplified version of the AOP-Wiki RDF schema. Major subjects are represented in green, and their properties are highlighted in grey. The predicates are indicated on the arrows. For the complete schema description, see [https://doi.org/10.1089/aivt.2021.0010](https://doi.org/10.1089/aivt.2021.0010).*
 
 ## Exercises
 ### Exercise 1 - Listing of subjects

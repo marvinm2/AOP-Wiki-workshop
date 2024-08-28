@@ -1,3 +1,5 @@
+<img src="pics/VHPlogo.png" alt="VHP4Safety" class="bg-primary mb-1" width="300px" align="right">
+
 # Querying the AOP-Wiki using the SNORQL User Interface
 
 [Back to overview](README.md)
