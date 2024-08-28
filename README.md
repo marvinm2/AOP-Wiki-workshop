@@ -1,6 +1,6 @@
 # AOP-Wiki-workshop
 
-```{image} pics/VGPlogo.png
+``` {image} /pics/VGPlogo.png
 :alt: VHP4Safety 
 :class: bg-primary mb-1
 :width: 200px
