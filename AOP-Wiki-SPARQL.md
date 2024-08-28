@@ -130,20 +130,7 @@ The SPARQL query will require the use of the mapped chemical IDs in AOP-Wiki usi
 
 Question 4.1: What are the titles of the two human pathways in WikiPathways that have the chemical described in the stressor of Adverse Outcome Pathway with ID 274 in AOP-Wiki?
 
-<button onclick="toggleAnswer('q4.1')">Answer</button><span id="q4.1" style="visibility: hidden">For Valproic acid: Valproic acid pathway (WP3871) and for Butyrate: Butyrate-induced histone acetylation (WP2366), SCFA and skeletal muscle substrate metabolism (WP4030), Tryptophan metabolism (WP465), and Effect of intestinal microbiome on anticoagulant response of vitamin K antagonists (WP5273). This can be done with SPARQL query:
-```sparql
-PREFIX wp: <http://vocabularies.wikipathways.org/wp#>
-SELECT  ?ChemicalName ?ChEBI ?PathwayTitle ?PathwayID
-WHERE{
-   ?chemical a cheminf:000000 ; dc:title ?ChemicalName ; dcterms:isPartOf ?Stressor ; skos:exactMatch ?mappedid .
-   ?Stressor dcterms:isPartOf ?AOP .
-   ?AOP a aopo:AdverseOutcomePathway ; dc:identifier aop:274.
-   ?mappedid a cheminf:000407 ; cheminf:000407 ?ChEBI.
-   SERVICE <http://sparql.wikipathways.org/sparql>{ 
-     ?metabolite wp:bdbChEBI ?mappedid ; dcterms:isPartOf ?Pathway.
-     ?Pathway a wp:Pathway ; dcterms:identifier ?PathwayID ; dc:title ?PathwayTitle ; wp:organismName "Homo sapiens" .}}
-ORDER BY DESC (?ChemicalName)
-```
+<button onclick="toggleAnswer('q4.1')">Answer</button><span id="q4.1" style="visibility: hidden">For Valproic acid: Valproic acid pathway (WP3871) and for Butyrate: Butyrate-induced histone acetylation (WP2366), SCFA and skeletal muscle substrate metabolism (WP4030), Tryptophan metabolism (WP465), and Effect of intestinal microbiome on anticoagulant response of vitamin K antagonists (WP5273).
 </span>
 
 ## Conclusion
