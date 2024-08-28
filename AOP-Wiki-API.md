@@ -29,7 +29,7 @@ The Swagger UI can be found at [aopwiki-api.cloud.vhp4safety.nl/api/marvinm2/AOP
 ## Exercises
 Go to https://aopwiki-api.cloud.vhp4safety.nl/api/marvinm2/AOPWikiQueries
 
-These exercises can also be done through coding environments such as R or Python. Please have a look at the service documentation for more information about this: [add link].
+These exercises can also be done through coding environments such as R or Python. Please have a look at the service documentation for more information about this: [docs.vhp4safety.nl/en/latest/tutorials/aopwikiapi/aopwikiapi](https://docs.vhp4safety.nl/en/latest/tutorials/aopwikiapi/aopwikiapi.html).
 
 ### Testing Functions
 Go to the request called `get-all-mies` and run it.
