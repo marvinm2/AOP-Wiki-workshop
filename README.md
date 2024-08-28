@@ -1,5 +1,11 @@
 # AOP-Wiki-workshop
 
+```{image} pics/VGPlogo.png
+:alt: VHP4Safety 
+:class: bg-primary mb-1
+:width: 200px
+:align: right 
+```
 Go to [https://marvinm2.github.io/AOP-Wiki-workshop](https://marvinm2.github.io/AOP-Wiki-workshop).
 
 Welcome to the Workshop on automated access to AOP-Wiki contents! This repository provides all the materials you need to explore and interact with the AOP-Wiki services, including the SPARQL endpoint, SNORQL User Interface (UI), and RESTful API with Swagger UI. Whether you are new to AOP-Wiki or looking to deepen your understanding of its data querying capabilities, this workshop offers structured exercises and resources to guide you through each tool.
