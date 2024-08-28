@@ -48,7 +48,7 @@ Question 1.1: What would we need to replace `aopo:KeyEvent` with to extract all 
 
 Question 1.2: What would we need to replace `aopo:KeyEvent` with to extract all Chemicals? 
 
-<button onclick="toggleAnswer('q1.2')">Answer</button><span id="q1.2" style="visibility: hidden">cheminf:0000000</span>
+<button onclick="toggleAnswer('q1.2')">Answer</button><span id="q1.2" style="visibility: hidden">cheminf:000000</span>
 
 Since the Key Event links can bring you to the AOP-Wiki for further exploration of the corresponding webpage, we can also directly request all their contents through the SPARQL query. For example, to extract the Key Event title, we add `?KE dc:title ?KEtitle` to the SPARQL query. The returned table upon running the query will get wider, so you might need to scroll to the right. 
 
@@ -131,6 +131,7 @@ The SPARQL query will require the use of the mapped chemical IDs in AOP-Wiki usi
 Question 4.1: What are the titles of the two human pathways in WikiPathways that have the chemical described in the stressor of Adverse Outcome Pathway with ID 274 in AOP-Wiki?
 
 <button onclick="toggleAnswer('q4.1')">Answer</button><span id="q4.1" style="visibility: hidden">For Valproic acid: Valproic acid pathway (WP3871) and for Butyrate: Butyrate-induced histone acetylation (WP2366), SCFA and skeletal muscle substrate metabolism (WP4030), Tryptophan metabolism (WP465), and Effect of intestinal microbiome on anticoagulant response of vitamin K antagonists (WP5273). This can be done with SPARQL query:
+```sparql
 PREFIX wp: <http://vocabularies.wikipathways.org/wp#>
 SELECT  ?ChemicalName ?ChEBI ?PathwayTitle ?PathwayID
 WHERE{
@@ -142,6 +143,7 @@ WHERE{
      ?metabolite wp:bdbChEBI ?mappedid ; dcterms:isPartOf ?Pathway.
      ?Pathway a wp:Pathway ; dcterms:identifier ?PathwayID ; dc:title ?PathwayTitle ; wp:organismName "Homo sapiens" .}}
 ORDER BY DESC (?ChemicalName)
+```
 </span>
 
 ## Conclusion
