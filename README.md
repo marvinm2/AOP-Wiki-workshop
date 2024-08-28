@@ -2,13 +2,14 @@
 
 Go to [https://marvinm2.github.io/AOP-Wiki-workshop](https://marvinm2.github.io/AOP-Wiki-workshop).
 
-Welcome to the Workshop on automated access to AOP-Wiki contents! This repository provides all the materials you need to explore and interact with the AOP-Wiki services, including the SPARQL endpoint, SNORQL User Interface (UI), and RESTful API with Swagger UI. Whether you are new to AOP-Wiki or looking to deepen your understanding of its data querying capabilities, this workshop offers structured exercises and resources to guide you through each tool.
+Welcome to the Workshop on automated access to AOP-Wiki contents! This repository provides all the materials you need to explore and interact with the AOP services, including the SPARQL endpoint, SNORQL User Interface (UI), and RESTful API with Swagger UI. Whether you are new to AOP-Wiki or looking to deepen your understanding of its data querying capabilities, this workshop offers structured exercises and resources to guide you through each tool.
 
 Explore the exercises below and select the option that best fits your learning goals.
 
 ## Workshop Overview
-The AOP-Wiki serves as a comprehensive repository of Adverse Outcome Pathways (AOPs), which are essential for understanding toxicodynamic processes and informing risk assessments. This workshop is designed to help you effectively query and extract data from AOP-Wiki using various tools and interfaces. You will gain practical experience with:
+The AOP-Wiki serves as a comprehensive repository of Adverse Outcome Pathways (AOPs), which are essential for understanding toxicodynamic processes and informing risk assessments. This workshop is designed to help you effectively query and extract data from AOP-Wiki using various tools and interfaces which are hosted on the VHP4Safety platform. 
 
+You will gain practical experience with:
 - SPARQL Queries: Learn how to retrieve linked data from AOP-Wiki using SPARQL, the query language for RDF databases.
 - SNORQL UI: Explore the user-friendly SNORQL interface for interacting with the AOP-Wiki database without needing to write complex queries.
 - RESTful API: Understand how to programmatically access AOP-Wiki data using the REST API, enabling integration with other tools and automation of data retrieval.
