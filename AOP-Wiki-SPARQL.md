@@ -26,10 +26,8 @@ The AOP-Wiki serves as the primary repository of qualitative information for AOP
 The AOP-Wiki SPARQL endpoint is loaded with RDF of the Adverse Outcome Pathway (AOP)-Wiki database [aopwiki.org](https://aopwiki.org/). It is used by both the SNORQL UI and REST API to explore the data. The AOP-Wiki SPARQL endpoint is accessible on [aopwiki.cloud.vhp4safety.nl/sparql/](https://aopwiki.cloud.vhp4safety.nl/sparql/). This is also the SPARQL endpoint URL that should be used when working from coding environments, these exercises could also be done through R or Python, for example.
 
 ## Figure of RDF schema
-:::{figure-md} markdown-fig
-<img src="pics/AOP-Wiki_RDF_simple.png" alt="AOP-Wiki RDF simple" class="bg-primary mb-1" width="1200px">
-This is a simplified version of the AOP-Wiki RDF schema. Major subjects are represented in green, and their properties are highlighted in grey. The predicates are indicated on the arrows. For the complete schema description, see [https://doi.org/10.1089/aivt.2021.0010](https://doi.org/10.1089/aivt.2021.0010).
-:::
+![](pics/AOP-Wiki_RDF_simple.png)
+*This is a simplified version of the AOP-Wiki RDF schema. Major subjects are represented in green, and their properties are highlighted in grey. The predicates are indicated on the arrows. For the complete schema description, see [https://doi.org/10.1089/aivt.2021.0010](https://doi.org/10.1089/aivt.2021.0010).*
 
 ## Exercises
 ### Exercise 1 - Listing of subjects
