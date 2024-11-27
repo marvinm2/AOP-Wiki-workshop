@@ -1,3 +1,27 @@
+---
+bioschemas:
+ “@context”: https://schema.org/
+ “@type”: LearningResource
+ “http://purl.org/dc/terms/conformsTo”:
+  - “@type”: LearningResource
+  - “@id”: “https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE”
+ about:
+  - “@id”: https://schema.org
+  - “@id”: http://edamontology.org/topic_2840
+ audience:
+  - “@type”: Audience
+  -  name: PhD students
+ name: "Automated Access to Adverse Outcome Pathways with VHP4Safety Tools"
+ author: [“Marvin Martens”]
+ contributor:
+  - “@type”: Person
+  - name: “Marvin Martens”
+ description: “The AOP-Wiki serves as a comprehensive repository of Adverse Outcome Pathways (AOPs), which are essential for understanding toxicodynamic processes and informing risk assessments. This workshop is designed to help you effectively query and extract data from AOP-Wiki using various tools and interfaces which are hosted on the VHP4Safety platform.”
+ keywords: “AOP-Wiki”
+ license: CC-BY 4.0
+ version: 1.0
+---
+
 <img src="pics/VHPlogo.png" alt="VHP4Safety" class="bg-primary mb-1" width="300px" align="right">
 
 # AOP-Wiki-workshop
