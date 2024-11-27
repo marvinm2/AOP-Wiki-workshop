@@ -1,3 +1,4 @@
+<!--
 <script type=“application/ld+json”>
 {
   “@context”: “https://schema.org”,
@@ -41,6 +42,7 @@
   “version”: “1.0"
 }
 </script>
+-->
 <img src="pics/VHPlogo.png" alt="VHP4Safety" class="bg-primary mb-1" width="300px" align="right">
 
 # AOP-Wiki-workshop
